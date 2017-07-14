@@ -1,0 +1,134 @@
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.slide {
+	position: relative;
+	max-width: 1306px;
+	min-height: inherit;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding-top: 56px;
+	padding-bottom: 110px;
+	font-family: @roboto;
+	color: @white;
+	background-color: #9968ec;
+	//**background-repeat: 
+	//	no-repeat;
+	//background-position:
+	//	center;
+	//background-size: 
+	//	cover,
+	//	cover;
+	//background-origin:
+	//	border-box,
+	//	border-box;
+	//background-image: 
+	//		linear-gradient(22deg, #b47be1 50%, transparent 50%),
+	//		linear-gradient(135deg, #9b96e8, #8c9bf7);
+
+	opacity: 0;
+	animation-name: fadein;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+	animation-delay: 0.1s;
+}
+
+.slide--hidden {
+	display: none;
+}
+
+.slide__title {
+	.no-margin();
+	font-weight: 300;
+	font-size: 48px;
+	line-height: 48px;
+}
+
+.slide__paragraph {
+	.no-margin();
+	margin-top: 42px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px; 
+}
+
+.slide__wrapper {
+	position: relative;
+	height: inherit;
+}
+
+.slide__wrapper::before,
+.slide__wrapper::after {
+	position: absolute;
+	content: "";
+	background-color: @white;
+	border-radius: 50%;
+}
+
+.slide__wrapper::before {
+	left: 2px;
+	bottom: -54px;
+	width: 8px;
+	height: 8px;
+}
+
+.slide__wrapper::after {
+	left: 24px;
+	bottom: -52px;
+	width: 4px;
+	height: 4px;
+}
+
+@media (min-width: 768px) {
+	.slide {
+		padding-top: 80px;
+		padding-bottom: 105px;
+	}
+
+	.slide__title {
+		font-size: 72px;
+		line-height: 72px;
+	}
+
+	.slide__paragraph {
+		margin-top: 30px;
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.slide {
+		padding-top: 95px;
+		padding-bottom: 250px;
+	}
+
+	.slide__title {
+		max-width: 50%;
+		font-size: 72px;
+		line-height: 72px;
+	}
+
+	.slide__paragraph {
+		max-width: 67%;
+		font-size: 24px;
+		line-height: 32px; 
+	}
+
+	.slide__wrapper::before {
+		bottom: -170px;
+	}
+
+	.slide__wrapper::after {
+		bottom: -168px;
+	}
+
+}

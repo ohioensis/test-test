@@ -1,0 +1,28 @@
+.footer-copyright {
+	position: relative;
+	padding: 30px 0;
+	font-family: @roboto;
+	font-size: 13px;
+	line-height: 20px;
+	color: @grey-text;
+	border-top: 1px solid #d3d9e0;
+}
+
+.footer-copyright p {
+	.no-margin();
+}
+
+.footer-copyright p:last-child {
+	margin-top: 30px;
+}
+
+.footer-copyright::after {
+	position: absolute;
+	bottom: 30px;
+	right: 0;
+	content: "";
+	width: 28px;
+	height: 32px;
+	background: transparent url("../img/icon-scada.png") no-repeat center;
+	background-size: contain;
+}
