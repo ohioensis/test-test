@@ -54,12 +54,28 @@
 	display: none;
 }
 
+@keyframes name {
+	0% {
+		transform: translateY(-700px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
 
 .slide__title {
 	.no-margin();
 	font-weight: 300;
 	font-size: 48px;
 	line-height: 48px;
+	transform: translateY(-700px);
+	animation-name: name;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-delay: 0.2s;
 }
 
 	@media (min-width: 768px) {
@@ -83,7 +99,13 @@
 	margin-top: 42px;
 	font-weight: 400;
 	font-size: 18px;
-	line-height: 24px; 
+	line-height: 24px;
+	opacity: 0;
+	animation-name: fadein; 
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-delay: 0.2s;
 }
 
 	@media (min-width: 768px) {

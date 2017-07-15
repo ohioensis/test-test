@@ -112,7 +112,7 @@
   right: 0;
   z-index: 1;
   width: 240px;
-  min-height: 567px;
+  min-height: 100vh;
   background-color: #ffffff;
   box-shadow: 4px 1px 20px 0px rgba(56, 70, 86, 0.5);
   animation: menu;
@@ -390,12 +390,26 @@
 .slide--hidden {
   display: none;
 }
+@keyframes name {
+  0% {
+    transform: translateY(-700px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .slide__title {
   margin: 0;
   padding: 0;
   font-weight: 300;
   font-size: 48px;
   line-height: 48px;
+  transform: translateY(-700px);
+  animation-name: name;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
 }
 @media (min-width: 768px) {
   .slide__title {
@@ -417,6 +431,12 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
 }
 @media (min-width: 768px) {
   .slide__paragraph {
@@ -498,6 +518,12 @@
   color: #5978ff;
   background-color: #ffffff;
   border-radius: 25px;
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
 }
 @keyframes btn {
   0% {
@@ -859,7 +885,6 @@
 @media (min-width: 768px) {
   .advantages__item {
     width: 37.5%;
-    min-height: 100px;
     box-sizing: border-box;
     margin-right: 12.5%;
     padding-right: 80px;
@@ -869,6 +894,7 @@
   .advantages__item {
     position: relative;
     width: 240px;
+    min-height: 100px;
     margin-right: 80px;
   }
   @keyframes cards {
