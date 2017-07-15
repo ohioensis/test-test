@@ -2,6 +2,7 @@
 	background-color: @white;
 }
 
+
 .partners__list {
 	display: flex;
 	justify-content: space-between;
@@ -11,9 +12,17 @@
 	vertical-align: middle;
 }
 
+	@media (min-width: 1024px) {
+		.partners__list {
+			margin: 0 12.5%;
+		}
+	}
+
+
 .partners__item {
 	align-self: center;
 }
+
 
 .partners__item--fca {
 	width: 55px;
@@ -22,12 +31,14 @@
 	background-size: contain;
 }
 
+
 .partners__item--pci {
 	width: 60px;
 	height: 45px;
 	background-image: url("../img/pci.png");
 	background-size: contain;
 }
+
 
 .partners__item--mastercard {
 	width: 51px;
@@ -36,34 +47,32 @@
 	background-size: contain;
 }
 
+
 .partners__item--visa {
 	display: none;
 }
+
+	@media (min-width: 768px) {
+		.partners__item--visa {
+			display: block;
+			width: 53px;
+			height: 20px;
+			background-image: url("../img/visa.png");
+			background-size: contain;
+		}
+	}
+
 
 .partners__item--secure {
 	display: none;
 }
 
-@media (min-width: 768px) {
-	.partners__item--visa {
-		display: block;
-		width: 53px;
-		height: 20px;
-		background-image: url("../img/visa.png");
-		background-size: contain;
+	@media (min-width: 768px) {
+		.partners__item--secure {
+			display: block;
+			width: 97px;
+			height: 17px;
+			background-image: url("../img/secure.png");
+			background-size: contain;
+		}
 	}
-
-	.partners__item--secure {
-		display: block;
-		width: 97px;
-		height: 17px;
-		background-image: url("../img/secure.png");
-		background-size: contain;
-	}
-}
-
-@media (min-width: 1024px) {
-	.partners__list {
-		margin: 0 12.5%;
-}
-}

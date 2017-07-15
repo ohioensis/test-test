@@ -2,6 +2,15 @@
 	display: none;
 }
 
+	@media (min-width: 1024px) {
+		.header-menu {
+			display: flex;
+			justify-content: space-between;
+			width: 86%;
+		}
+	}
+
+
 @keyframes menu {
 	0% {
 		transform: translateX(240px);
@@ -27,6 +36,13 @@
 	animation-fill-mode: forwards;
 
 }
+
+	@media (min-width: 1024px) {
+		.header-menu--show {
+			display: none;
+		}
+	}
+
 
 .header-menu__close {
 	position: absolute;
@@ -64,19 +80,8 @@
 	transform: rotate(-45deg);
 }
 
-@media (min-width: 1024px) {
-	.header-menu {
-		display: flex;
-		justify-content: space-between;
-		width: 86%;
+	@media (min-width: 1024px) {
+		.header-menu__close {
+			display: none;
+		}
 	}
-
-	.header-menu--show {
-		display: none;
-	}
-
-	.header-menu__close {
-		display: none;
-	}
-
-}

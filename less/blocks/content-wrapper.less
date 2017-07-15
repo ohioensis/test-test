@@ -3,27 +3,33 @@
 	margin: 0 auto;
 }
 
+	@media (min-width: 768px) {
+		.content-wrapper {
+			width: 83%;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.content-wrapper {
+			width: 74%;
+		}
+	}
+
+
 .content-wrapper--header {
 	.flex();
 }
 
-@media (min-width: 768px) {
-	.content-wrapper {
-		width: 83%;
+	@media (min-width: 1024px) {
+		.content-wrapper--header {
+			width: 95.315%;
+			display: flex;
+			justify-content: space-between;
+		}
 	}
-}
+
 
 @media (min-width: 1024px) {
-	.content-wrapper {
-		width: 74%;
-	}
-
-	.content-wrapper--header {
-		width: 95.315%;
-		display: flex;
-		justify-content: space-between;
-	}
-
 	.content-wrapper--services {
 		display: flex;
 		justify-content: space-between;
