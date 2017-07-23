@@ -4,6 +4,13 @@
 	.no-list();
 }
 
+	@media (min-width: 1024px) {
+		.social {
+			width: 32%;
+		}
+	}
+
+
 .social__link a {
 	display: block;
 	width: 36px;
@@ -14,27 +21,24 @@
 	border-radius: 50%;
 }
 
+.social__link a:hover {
+	background-color: rgba(89, 120, 255, 0.3);
+}
+
+
 .social__link--link a {
 	background: rgba(89, 120, 255, 0.1) url("../img/icon-link.png") no-repeat center;
 	background-size: 14px auto;
 }
+
 
 .social__link--fb a {
 	background: rgba(89, 120, 255, 0.1) url("../img/icon-fb.png") no-repeat center;
 	background-size: 9px auto;
 }
 
+
 .social__link--twi a {
 	background: rgba(89, 120, 255, 0.1) url("../img/icon-twi.png") no-repeat center;
 	background-size: 14px auto;
-}
-
-.social__link a:hover {
-	background-color: rgba(89, 120, 255, 0.3);
-}
-
-@media (min-width: 1024px) {
-	.social {
-		width: 32%;
-	}
 }

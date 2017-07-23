@@ -6,14 +6,14 @@ $(document).ready(function() {
 		$(".header-menu").removeClass("header-menu--show");
 	});
     $(".advantages__item").hover(function() {
-        $(this).css("advantages__item--hover");
+        $(this).addClass("advantages__item--hover");
     }, function() {
         $(this).removeClass("advantages__item--hover");
     });
     $(".advantages__item").hover(function() {
-        $(this).prevAll(".advantages__item").css("opacity", "0.2");
+        $(this).prevAll(".advantages__item").find(".advantages__card").css("opacity", "0.2");
     }, function() {
-        $(this).prevAll(".advantages__item").css("opacity", "1");
+        $(this).prevAll(".advantages__item").find(".advantages__card").css("opacity", "1");
     });
 });
 
